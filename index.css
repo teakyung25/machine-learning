@@ -1,0 +1,230 @@
+*{
+  font-family: arial;
+  font-family: 'Roboto';
+  /* color: white; */
+  font-weight: lighter;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 10px;
+  transition: background 0.25s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+html{
+  height: 100%;
+}
+html, body{
+  margin:0;
+  background-color: rgb(230,230,230);
+  height: 100%;
+  width: 100%;
+}
+
+/**/
+
+div.section{
+  width: 100%;
+  height: 100%;
+  color: black;
+  box-sizing: border-box;
+  padding: 30px;
+  position: relative;
+}
+
+#title-section > #title,#quote {
+  color:rgb(230,230,230);
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-delay: 8s;
+}
+#bounce{
+  color:rgb(230,230,230);
+  animation-name: example;
+  animation: example 4s 8s 1 forwards, bounce 5s ease-in-out infinite;
+  /* animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-delay: 8s; */
+  position: absolute;
+  bottom: 10px;
+}
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -70%);
+  }
+  50%{
+    transform: translate(-50%, -50%);
+  }
+  100%{
+    transform: translate(-50%, -70%);
+  }
+}
+@keyframes example {
+  0%   {color:rgb(230,230,230)}
+  100% {color:rgb(120,120,120)}
+}
+#title-section{
+  background-color: rgb(230,230,230);
+  color: rgb(150,150,150);
+  /* display: flex; */
+  position: relative;
+  text-align: center;
+}
+
+#graph{
+  width:60%;
+  height:60%;
+  /* border-bottom: solid 2px black;
+  border-left: solid 2px black; */
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  display: inline-block;
+}
+#background-section{
+  background-color: rgb(240,240,240);
+  background-image: url('machine.jpg');
+  background-size: cover;
+}
+#learned-section{
+  background-color: rgb(230,230,230);
+  height: unset;
+}
+#learned-section > .info-cont > h1 {
+  font-size:400%;
+}
+div.info-cont{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  /* position: absolute;
+  top: 25%;
+  left: 37%;
+  transform: translate(-50%,-50%);
+  width: 50%; */
+  /* width: 80%;
+  height: 80%; */
+}
+h1#title {
+  /* position: absolute; */
+  /* left:-5%;
+  top:50%;
+  transform:translate(0,-50%);
+  transform: rotate(-90deg); */ 
+  font-size: 3em;
+  margin:0;
+  
+}
+h3#quote{
+  /* position: absolute;
+  bottom:0;
+  left: 50%;
+  transform: translate(-50%,10%); */
+}
+
+nav{
+  position:fixed;
+  right:10px;
+  top:50%;
+  display: inline-block;
+  transform: translate(0,-50%);
+  z-index: 3;
+}
+nav > a {
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  background-color: rgb(150,150,150);
+  border:solid 2px rgb(200,200,200);;
+  display: inline-block;
+  margin:10px;
+}
+nav > a:hover{
+  background-color: rgb(200,200,200);
+}
+.tooltip {
+  position: relative;
+  display: block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  color: rgb(120,120,120) ;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 10px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 105%;
+}
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.image-overlay{
+  position:absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  background-color: rgba(20, 20, 20, 0.7);
+  color:white;
+}
+img{
+  border-radius: 10px;
+}
+
+.content{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  width: 80%;
+}
+.content > *{
+  margin:15px;
+}
+.content > img{
+  width: 40%;
+}
+.content_info{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  display: flex;
+  width: 80%;
+}
+#info{
+  /* margin-right: 30px; */
+}
